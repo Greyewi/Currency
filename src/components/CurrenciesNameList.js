@@ -6,7 +6,7 @@ export const CurrenciesNameList = (props) => {
   return (
     <main>
       {currencyList && currencyList.list && currencyList.list.map((item, key) =>
-        <div onClick={() => getCurrencyData(item)} key={key}>{item}</div>)
+        <div className="item" onClick={() => getCurrencyData(item)} key={key}>{item}</div>)
       }
     </main>
   )

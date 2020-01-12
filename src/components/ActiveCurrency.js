@@ -8,6 +8,7 @@ export const ActiveCurrency = (props) => {
     <main>
       {rates && rates.map((item, key) =>
         <div
+          className="item"
           onClick={getCurrencyData ? () => getCurrencyData(Object.keys(item)) : () => false}
           key={key}
         >
