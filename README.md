@@ -1,16 +1,9 @@
-## https://greyewi.github.io/Currency - стенд
+# Get list of currency from european exchange.
 
-#### Основной стек технологий: react, redux, redux-saga, reselect, react-router(5), axios, immutable.
-#### Паттерн организации работы с моделю: Redux Ducks. https://github.com/erikras/ducks-modular-redux 
+## https://greyewi.github.io/Currency - stand
 
-1) Подгружается список валют, с европейской биржи.
-2) При клике на валюту - тянется курс конкретной валюты.
-3) После нажатия на кнопку «Save current currency» происходит сохранение состояния валюты в локальное хранилище браузера.
-4) Появляется кнопка «To Saves list», которая делает переход на страницу списка сохраненных валют, где можно их посмотреть и удалить.
-
-Баги:
-1) Роутинг на стенде. Если загружать страницу со списка сохраненных валют, то выйдет 404. Приложение разрабатывалось на localhost и не предполагало, что будет использоваться урл формата «../Currency» Исправляется изменением дефолтного урла с «/» на «/Currency»
-2) Кнопка назад меняет историю браузера, но при нажатии на кнопку в стартовой странице происходит уход с сайта. Исправляется добавлением функционала возврата на уровень выше. 
+#### Current technology stack: react, redux, redux-saga, reselect, react-router(5), axios, immutable.
+#### Data model: Redux Ducks. https://github.com/erikras/ducks-modular-redux 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
