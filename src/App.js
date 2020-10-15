@@ -29,7 +29,7 @@ class App extends Component {
   
   render() {
     const {isLoading, ...props} = this.props
-    
+    console.log(isLoading)
     return (
       <div className="App">
         <Header {...props}/>
