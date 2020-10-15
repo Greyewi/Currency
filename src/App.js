@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {useEffect} from 'react'
 import './App.scss'
 import "antd/dist/antd.css"
 import {Route, Switch} from 'react-router-dom'
@@ -20,26 +20,21 @@ import {
   getCurrencyData,
 } from './ducks/currency'
 
-class App extends Component {
-  
-  constructor(props) {
-    super(props)
-    this.props.initCurrencyList()
-  }
-  
-  render() {
-    const {isLoading, ...props} = this.props
-    console.log(isLoading)
-    return (
-      <div className="App">
-        <Header {...props}/>
-        {isLoading ? <Spin size="large" /> : <Switch>
-          <Route path="/list" render={() => <SavesCurrencies {...props}/>}/>
-          <Route path="/" render={() => <Main {...props}/>}/>
-        </Switch>}
-      </div>
-    )
-  }
+const App = ({initCurrencyList, isLoading, ...props}) => {
+
+  useEffect(() => {
+    initCurrencyList()
+  }, [])
+    
+  return (
+    <div className="App">
+      <Header {...props}/>
+      {isLoading ? <Spin size="large" /> : <Switch>
+        <Route path="/list" render={() => <SavesCurrencies {...props}/>}/>
+        <Route path="/" render={() => <Main {...props}/>}/>
+      </Switch>}
+    </div>
+  )
 }
 
 export default connect(state => ({
