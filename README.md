@@ -1,3 +1,10 @@
+# Get list of currency from european exchange.
+
+## https://greyewi.github.io/Currency - stand
+
+#### Current technology stack: react, redux, redux-saga, reselect, react-router(5), axios, immutable.
+#### Data model: Redux Ducks. https://github.com/erikras/ducks-modular-redux 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
